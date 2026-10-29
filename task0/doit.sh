@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
+cd -- "$(dirname -- "${BASH_SOURCE[0]}")"
 
 if [ "$(uname -s)" == "Darwin" ]; then
     g++ -std=c++17 -o main main.cpp \
